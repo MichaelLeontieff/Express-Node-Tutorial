@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  h3= name
+  h3= videodata.categoryName
+
+  ul
+    for name in videodata.categories
+      li
+        - var link = "https://thenewboston.com/videos_food.php?cat=" + name.categoryID;
+        a(href="#{link}")= name.categoryName
+
+
+
